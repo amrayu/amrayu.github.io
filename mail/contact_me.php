@@ -18,7 +18,7 @@ $message = $_POST['message'];
 // Create the email and send the message
 $to = 'info@processartistlab.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "PAL Contact Form Message from $name";
-$email_body = "You have a new message from $name!\n\n"."$name's Email: $email_address\n\n$name's Message:\n$message";
+$email_body = "You have a new message from $name!\n\n"."Email: $email_address\n\nMessage:\n$message";
 $headers = "From: info@processartistlab.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
